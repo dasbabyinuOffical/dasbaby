@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "./images/Coin-Logov2.svg";
 import Twitter from "./images/twitter.svg";
 import Telegram from "./images/telegram.svg";
 import Swap from "./images/swap-white.svg";
@@ -11,14 +10,13 @@ class Header_top extends React.Component {
       <div className="header_dapp">
         <div className="header_top">
           <div className="logo">
-            <embed src={Logo} alt="DasBaby brand logo" />
             <span className="logo-topleft">DasBaby</span>
           </div>
           <nav>
             <form>
               <button
                 className="btn btn--link text text--small text--medium"
-                formAction="https://twitter.com/DasBaby"
+                formAction="http://twitter.com/DasBaby_Inu"
               >
                 <img className="discord" alt="Twitter" src={Twitter}></img>
               </button>

@@ -60,7 +60,7 @@ class Features extends React.Component {
             <form>
               <button
                 className="btn btn--accent2 text--small text--medium btn-page-app"
-                formAction="https://twitter.com/DasBaby"
+                formAction="http://twitter.com/DasBaby_Inu"
               >
                 Twitter
               </button>

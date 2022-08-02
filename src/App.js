@@ -15,7 +15,7 @@ function App() {
       <Roadmap></Roadmap>
       <TradeSecure></TradeSecure>
       <Features></Features>
-      <Team></Team>
+      {/* <Team></Team> */}
       <Footer></Footer>
     </div>
   );

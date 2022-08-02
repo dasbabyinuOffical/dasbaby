@@ -16,11 +16,11 @@ class Header_top extends React.Component {
         </div>
         <nav className="header-nav">
           <ul className="list list--inline">
-            <LinkR to="teamLink" spy={true} smooth={true}>
+            {/* <LinkR to="teamLink" spy={true} smooth={true}>
               <li className="list__item text text--small text--regular">
                 Team
               </li>
-            </LinkR>
+            </LinkR> */}
             <LinkR to="features" spy={true} smooth={true}>
               <li className="list__item text text--small text--regular">
                 Features
@@ -28,38 +28,38 @@ class Header_top extends React.Component {
             </LinkR>
           </ul>
           <a
-            href="https://twitter.com/DasBabyInu"
+            href="http://twitter.com/DasBaby_Inu"
             target="_blank"
             rel="noopener noreferrer"
           >
             <form>
               <button
                 className="btn btn--link text text--small text--medium"
-                formAction="https://twitter.com/DasBabyInu"
+                formAction="http://twitter.com/DasBaby_Inu"
               >
                 <img className="discord" alt="Twitter" src={Twitter}></img>
               </button>
             </form>
           </a>
           <a
-            href="https://t.me/DasBabyInu"
+            href="https://t.me/DasBaby_Inu"
             target="_blank"
             rel="noopener noreferrer"
           >
             <form>
               <button
                 className="btn btn--link text text--small text--medium"
-                formAction="https://t.me/DasBabyInu"
+                formAction="https://t.me/DasBaby_Inu"
               >
                 <img className="discord" alt="Telegram" src={Telegram}></img>
               </button>
             </form>
           </a>
-          <Link to="dApp">
+          {/* <Link to="dApp">
             <button className="btn btn--accent2 text--small text--medium btn-top-app">
               App
             </button>
-          </Link>
+          </Link> */}
           <span className="vertical-line" />
           <a
             href="https://pancakeswap.finance/swap"
@@ -73,7 +73,7 @@ class Header_top extends React.Component {
           <form>
             <button
               className="btn btn--link text text--small text--medium"
-              formAction="https://twitter.com/DasBabyInu"
+              formAction="http://twitter.com/DasBaby_Inu"
             >
               <img className="discord2" alt="Twitter" src={Twitter}></img>
             </button>

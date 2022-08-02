@@ -69,7 +69,7 @@ class Header_body extends React.Component {
                 Holders:
               </span>
               <span className="text text--small text--regular text--white badge-hold2">
-                6+
+                500+
               </span>
             </div>
             <div className="badge-container-price">
@@ -77,7 +77,7 @@ class Header_body extends React.Component {
                 Price:
               </span>
               <span className="text text--small text--regular text--white badge-hold2">
-                $0.0000000000...
+                $0.00000186
               </span>
             </div>
             <LinkR to="buyLink" spy={true} smooth={true}>

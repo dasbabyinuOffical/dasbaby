@@ -2,7 +2,7 @@ import React from "react";
 import MetaMask from "./images/metamask.svg";
 import BNB from "./images/bnb.svg";
 import Pancake from "./images/pancake.svg";
-import SwapDasBaby from "./images/bnb-cat.svg";
+import SwapDasBaby from "./images/bnb-DasBaby.png";
 import ChevronRight from "./images/chevron-right.svg";
 
 class Trade_securely extends React.Component {
@@ -103,6 +103,12 @@ class Trade_securely extends React.Component {
               ‘Select a token’ and enter the token address or search for it on
               the tokens list.
             </p>
+            <a
+              href="https://pancakeswap.finance/swap"
+              nofollow="true"
+              target="_blank"
+              rel="noreferrer"
+            >
             <button className="btn btn--flex btn--accent">
               <span className="text--standart text--medium text-bold">
                 DasBaby Token
@@ -111,6 +117,7 @@ class Trade_securely extends React.Component {
                 <img src={ChevronRight} alt="Right Icon" />
               </div>
             </button>
+            </a>
           </div>
         </div>
       </section>
