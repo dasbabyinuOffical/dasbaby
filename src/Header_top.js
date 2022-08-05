@@ -15,49 +15,49 @@ class Header_top extends React.Component {
           <span className="logo-topleft">DasBabyInu</span>
         </div>
         <nav className="header-nav">
-          <ul className="list list--inline">
-            <LinkR to="teamLink" spy={true} smooth={true}>
-              <li className="list__item text text--small text--regular">
-                Team
+          <div className="list list--inline">
+            <Link to="../whitePaper">
+              <li className="list__item text text--small text--regular text--white">
+                WhitePaper
               </li>
-            </LinkR>
+            </Link>
             <LinkR to="features" spy={true} smooth={true}>
               <li className="list__item text text--small text--regular">
                 Features
               </li>
             </LinkR>
-          </ul>
+          </div>
           <a
-            href="https://twitter.com/DasBabyInu"
+            href="http://twitter.com/DasBaby_Inu"
             target="_blank"
             rel="noopener noreferrer"
           >
             <form>
               <button
                 className="btn btn--link text text--small text--medium"
-                formAction="https://twitter.com/DasBabyInu"
+                formAction="http://twitter.com/DasBaby_Inu"
               >
                 <img className="discord" alt="Twitter" src={Twitter}></img>
               </button>
             </form>
           </a>
           <a
-            href="https://t.me/DasBabyInu"
+            href="https://t.me/DasBaby_Inu"
             target="_blank"
             rel="noopener noreferrer"
           >
             <form>
               <button
                 className="btn btn--link text text--small text--medium"
-                formAction="https://t.me/DasBabyInu"
+                formAction="https://t.me/DasBaby_Inu"
               >
                 <img className="discord" alt="Telegram" src={Telegram}></img>
               </button>
             </form>
           </a>
-          <Link to="dApp">
+          <Link to="../NFT">
             <button className="btn btn--accent2 text--small text--medium btn-top-app">
-              App
+              NFT
             </button>
           </Link>
           <span className="vertical-line" />
@@ -65,6 +65,7 @@ class Header_top extends React.Component {
             href="https://pancakeswap.finance/swap"
             target="_blank"
             rel="noopener noreferrer"
+            className=""
           >
             <button className="btn btn--accent text--small text--medium btn-top-right">
               Swap <embed src={Swap} className="swap" alt="swap icon"></embed>
@@ -73,7 +74,7 @@ class Header_top extends React.Component {
           <form>
             <button
               className="btn btn--link text text--small text--medium"
-              formAction="https://twitter.com/DasBabyInu"
+              formAction="http://twitter.com/DasBaby_Inu"
             >
               <img className="discord2" alt="Twitter" src={Twitter}></img>
             </button>
@@ -86,6 +87,10 @@ class Header_top extends React.Component {
               <img className="discord2" alt="Telegram" src={Telegram}></img>
             </button>
           </form>
+          
+          
+          
+          
         </nav>
       </div>
     );

@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Mainnet, DAppProvider } from "@usedapp/core";
 import Stake from "./dApp_stake";
 import Claim from "./dApp_claim";
+import WhitePaper from "./WhitePaper";
+import NFT from "./Nft";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -25,6 +27,8 @@ root.render(
         <Route path="dApp" element={<DApp />} />
         <Route path="stake" element={<Stake />} />
         <Route path="claim" element={<Claim />} />
+        <Route path="WhitePaper" element={<WhitePaper />} />
+        <Route path="NFT" element={<NFT />} />
         <Route
           path="*"
           element={

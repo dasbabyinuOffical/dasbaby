@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "./images/Coin-Logov2.svg";
 
 class Footer extends React.Component {
   render() {
@@ -7,7 +6,6 @@ class Footer extends React.Component {
       <footer className="footer">
         <div className="footer__top">
           <div className="footer__top__logo">
-            <img src={Logo} alt="brand logo" />
             <span className="text text--medium">DasBaby</span>
           </div>
         </div>
