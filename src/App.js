@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Features from "./Features";
 import Team from "./team";
 import Roadmap from "./Roadmap";
+import WhitePaper from "./WhitePaper";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header></Header>
       <WhyCrypto></WhyCrypto>
       <Roadmap></Roadmap>
+      {/* <WhitePaper></WhitePaper> */}
       <TradeSecure></TradeSecure>
       <Features></Features>
       {/* <Team></Team> */}

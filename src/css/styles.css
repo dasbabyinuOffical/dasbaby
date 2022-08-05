@@ -416,9 +416,20 @@ a {
   color: var(--color-accent);
 }
 
-.list--inline .list__item {
-  display: inline;
-  margin-right: 32px;
+@media screen and (min-width: 768px) {
+  .list--inline .list__item {
+    display: inline;
+    margin-right: 70px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list--inline .list__item {
+    display: inline;
+    margin-right: 12px;
+    margin-top: 50px;
+  }
 }
 
 /* Icons */
@@ -1830,4 +1841,88 @@ ul{
   .footer {
     padding: 10rem 12rem 5rem;
   }
+}
+
+.view {
+  background:#444;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 50px 0;
+  overflow: auto;
+}
+.pageContainer {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+  width:max-content;
+  max-width:100%;
+}
+
+
+.pages_pinterest{
+  margin-top: 8rem;
+  width: 100%;
+  height: 100%;
+  border: 0rem solid red;
+  overflow: hidden;
+  overflow: auto;
+  box-sizing: border-box;
+  
+}
+
+.pages_hoc{
+  height: 100%;
+  margin: 0 auto;
+}
+
+.imgBox{
+  width: 20rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+  border: 0.1rem solid white;
+  vertical-align: top;
+  border-radius: 1rem;
+}
+
+.nftNumber{
+  width: 20rem;
+  height: 0rem;
+  font-size: medium;
+  margin-top: 1.4rem;
+  text-align: center;
+  border: 0rem solid white;
+}
+
+.nftButton {
+  width: 20rem;
+  height: 4rem;
+  margin-top: 2.3rem;
+  cursor: pointer;
+  border: 0rem solid white;
+  background: hotpink;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.customNav {
+  position:absolute;
+  top: 0px;
+  left:0px;
+  right:0px;
+}
+
+.owl-prev {
+  float:left;
+  font-weight: medium;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.owl-next {
+  float:right;
+  margin-right: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
