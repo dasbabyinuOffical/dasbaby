@@ -1878,7 +1878,7 @@ ul{
   width: 20rem;
   height: 30rem;
   margin-bottom: 2rem;
-  border: 0.1rem solid white;
+  border: 1rem solid #c0c0c0;
   vertical-align: top;
   border-radius: 1rem;
 }
@@ -1899,8 +1899,7 @@ ul{
   cursor: pointer;
   border: 0rem solid white;
   background: hotpink;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  
 }
 
 .customNav {
