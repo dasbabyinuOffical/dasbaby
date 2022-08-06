@@ -4,8 +4,10 @@ import axios from "axios";
 function NFT() {
   const [data,setData] = useState([])
 
+  const [scrollY,setScrollY] = useState(0)
+
   useEffect(() => {
-    axios.get("http://dasbabyinu.com/nft/?start=1&&page=20").then((res) => {
+    axios.get("http://dasbabyinu.com/nft/?start=1&&page=100").then((res) => {
       setData(res.data)
   })
   },[])
@@ -15,7 +17,6 @@ function NFT() {
   }
 
     return (
-      <>
       <div>
         <div>
           <div className="owl-prev">NFT Marketplace</div>
@@ -34,10 +35,10 @@ function NFT() {
             {data.map((item, index) => {
               return (
                 <div key={index} className="imgBox">
-                  <img src={item.image} />
+                  <img src={item.image} alt={item.name}/>
                   <p className="nftNumber">{`Genesis-#${index}`}</p>
                   
-                   {item.owner == "0" && <button
+                   {item.owner === "0" && <button
                     className="nftButton"
                     onClick={mintNft}
                   >
@@ -49,7 +50,6 @@ function NFT() {
           </div>
         </div>
       </div>
-      </>
     );
 }
 
