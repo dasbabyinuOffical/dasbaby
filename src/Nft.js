@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect} from "react";
 import axios from "axios";
 import MetaMask from "./MetaMask";
 import { ethers,BigNumber } from "ethers";
@@ -11,10 +11,22 @@ const borderSilver = "1rem solid #c0c0c0"
 function NFT() {
   const contract = "0x74155e8E00D19083033d3f58C0BA25eAE1856f84"
   const [data,setData] = useState([])
+  const [start,setStart] = useState(1);
+
+  const page = 14;
+  const loadMore = () =>{
+    if (start > 1000){
+      return 
+    }
+    const url = "http://dasbabyinu.com/nft/?start=" + start + "&&page=" + page;
+    axios.get(url ).then((res) => {
+      setData([...data,...res.data])
+      })
+    setStart(start+page);
+  }
+
   useEffect(() => {
-    axios.get("http://dasbabyinu.com/nft/?start=788&&page=14").then((res) => {
-      setData(res.data)
-  })
+     loadMore()
   },[])
 
   const mintNft = async (index) =>{
@@ -68,6 +80,9 @@ function NFT() {
               );
             })}
           </div>
+          <button className="owl-next btn btn-page-app" onClick={loadMore}>
+                Loading More
+           </button>
         </div>
       </div>
     );
