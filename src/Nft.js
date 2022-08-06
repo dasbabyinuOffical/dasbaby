@@ -39,7 +39,17 @@ function NFT() {
     return (
       <div>
         <div>
-          <div className="owl-prev">NFT Marketplace</div>
+          <div className="owl-prev">
+            NFT Marketplace
+            
+             
+            
+          </div>
+           <button className="owl-next btn btn--accent2 text--small text--small btn-top-app" onClick={() => {
+            window.location.href = "/";
+           }}>
+                Back
+           </button>
           <MetaMask/>
         </div>
 
