@@ -41,7 +41,7 @@ function NFT() {
               return (
                 <div key={index} className="imgBox">
                   <img src={item.image} alt={item.name}/>
-                  <p className="nftNumber">{`Genesis-#${index}`}</p>
+                  <p className="nftNumber">{`Genesis-#${index+1}`}</p>
                   
                    {item.owner === "0" && <button
                     className="nftButton"
