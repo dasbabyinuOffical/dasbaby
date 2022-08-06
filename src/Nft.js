@@ -4,11 +4,15 @@ import MetaMask from "./MetaMask";
 import { ethers,BigNumber } from "ethers";
 import Genesis from "./Genesis.json";
 
+
+const borderBrone = "1rem solid #C47222"
+const borderSilver = "1rem solid #c0c0c0"
+
 function NFT() {
   const contract = "0x74155e8E00D19083033d3f58C0BA25eAE1856f84"
   const [data,setData] = useState([])
   useEffect(() => {
-    axios.get("http://dasbabyinu.com/nft/?start=1&&page=14").then((res) => {
+    axios.get("http://dasbabyinu.com/nft/?start=788&&page=14").then((res) => {
       setData(res.data)
   })
   },[])
@@ -43,7 +47,7 @@ function NFT() {
           <div className="pages_hoc">
             {data.map((item, index) => {
               return (
-                <div key={index} className="imgBox">
+                <div key={index} className="imgBox" style={ (item.id > 788) ? {border: borderBrone} : {border: borderSilver} }>
                   <img src={item.image} alt={item.name}/>
                   <p className="nftNumber">{item.name}</p>
                   
