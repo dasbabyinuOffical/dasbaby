@@ -23,7 +23,11 @@ function NFT() {
     const daiContractWithSigner = daiContract.connect(signer);
 
     const id = BigNumber.from(index);
-    const transaction  = await daiContractWithSigner.mint(id)
+    const gas  = await daiContractWithSigner.estimateGas.mint(id)
+    console.log("gas:",gas);
+    const transaction  = await daiContractWithSigner.mint(id,{
+      gasLimit: gas,
+    })
     const transactionReceipt = await transaction.wait();
     console.log(transactionReceipt)
   }
@@ -45,7 +49,7 @@ function NFT() {
                   
                    {item.owner === "0" && <button
                     className="nftButton"
-                    onClick={() => mintNft(index)}
+                    onClick={() => mintNft(index+1)}
                   >
                    Mint
                   </button>} 
