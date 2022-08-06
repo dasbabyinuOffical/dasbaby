@@ -736,12 +736,18 @@ margin-bottom: -4rem;
   margin-top: 4rem;
 }
 
+.btn-bottom{
+  margin: 0 auto;
+  display: block;
+}
+
 .btn-whitepaper:hover{
   background-color: var(--color-white-btn-hover);
 }
 .btn-free:hover{
   background-color: rgb(155, 117, 21);
 }
+
 
 
 /* Cards */

@@ -52,13 +52,8 @@ function NFT() {
       <div>
         <div>
           <div className="owl-prev">
-            NFT Marketplace
+           <a href="/" style={{color:"white"}}>Home</a>
           </div>
-           <button className="owl-next btn btn--accent2 text--small text--small btn-top-app" onClick={() => {
-            window.location.href = "/";
-           }}>
-                Back
-           </button>
           <MetaMask/>
         </div>
 
@@ -80,10 +75,11 @@ function NFT() {
               );
             })}
           </div>
-          <button className="owl-next btn btn-page-app" onClick={loadMore}>
+          
+        </div>
+        <button className="btn btn-page-app btn-bottom" onClick={loadMore}>
                 Loading More
            </button>
-        </div>
       </div>
     );
 }
