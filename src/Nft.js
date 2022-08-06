@@ -47,7 +47,7 @@ function NFT() {
           <div className="pages_hoc">
             {data.map((item, index) => {
               return (
-                <div key={index} className="imgBox" style={ (item.id > 788) ? {border: borderBrone} : {border: borderSilver} }>
+                <div key={index} className="imgBox" style={ (item.id > 212) ? {border: borderBrone} : {border: borderSilver} }>
                   <img src={item.image} alt={item.name}/>
                   <p className="nftNumber">{item.name}</p>
                   
