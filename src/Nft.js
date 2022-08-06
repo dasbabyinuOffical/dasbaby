@@ -1,57 +1,18 @@
-import React, { Component } from "react";
+import React, { useState,useEffect } from "react";
 import Masonry from "masonry-layout";
 import axios from "axios";
-export default class Pinterest extends Component {
-  state = {
-    data: [],
-    butitleArrr: [
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-      "领取",
-    ],
-  };
 
-  componentDidMount() {
-    axios.get("http://dasbabyinu.com/nft/").then((res) => {
-      this.setState(
-        {
-          data: res.data,
-        },
-        () => {
-          this.advanceWidth();
-        }
-      );
-    });
-  }
+function NFT() {
+  const [data,setData] = useState([])
 
-  advanceWidth = () => {
-    var elem = document.querySelector(".pages_hoc");
-    new Masonry(elem, {
-      itemSelector: ".imgBox",
-      columnWidth: ".imgBox",
-      fitWidth: true,
-      gutter: 20,
-    });
-  };
-
-  getNft = (index) => {
-    this.state.butitleArrr[index] = "已领取";
-    this.setState({
-      butitleArrr: this.state.butitleArrr,
-    });
-  };
-
-  render() {
-    const { data, butitleArrr } = this.state;
+  useEffect(() => {
+    axios.get("http://dasbabyinu.com/nft/?start=1&&page=10").then((res) => {
+      setData(res.data)
+  })
+  },[])
 
     return (
+      <>
       <div>
         <div>
           <div className="owl-prev">NFT Marketplace</div>
@@ -76,7 +37,7 @@ export default class Pinterest extends Component {
                     className="nftButton"
                     onClick={() => this.getNft(index)}
                   >
-                    {butitleArrr[index]}
+                    领取人:{item.owner}
                   </button>
                 </div>
               );
@@ -84,6 +45,8 @@ export default class Pinterest extends Component {
           </div>
         </div>
       </div>
+      </>
     );
-  }
 }
+
+export default NFT;
