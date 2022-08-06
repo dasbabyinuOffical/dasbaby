@@ -1,15 +1,18 @@
 import React, { useState,useEffect } from "react";
-import Masonry from "masonry-layout";
 import axios from "axios";
 
 function NFT() {
   const [data,setData] = useState([])
 
   useEffect(() => {
-    axios.get("http://dasbabyinu.com/nft/?start=1&&page=10").then((res) => {
+    axios.get("http://dasbabyinu.com/nft/?start=1&&page=20").then((res) => {
       setData(res.data)
   })
   },[])
+
+  const mintNft = () =>{
+
+  }
 
     return (
       <>
@@ -26,19 +29,20 @@ function NFT() {
           </form>
         </div>
 
-        <div className="pages_pinterest">
+        <div className="pages_pinterest"> 
           <div className="pages_hoc">
             {data.map((item, index) => {
               return (
                 <div key={index} className="imgBox">
                   <img src={item.image} />
-                  <p className="nftNumber">{item.name}</p>
-                  <button
+                  <p className="nftNumber">{`Genesis-#${index}`}</p>
+                  
+                   {item.owner == "0" && <button
                     className="nftButton"
-                    onClick={() => this.getNft(index)}
+                    onClick={mintNft}
                   >
-                    领取人:{item.owner}
-                  </button>
+                   Mint
+                  </button>} 
                 </div>
               );
             })}

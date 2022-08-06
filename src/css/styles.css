@@ -1881,13 +1881,16 @@ ul{
   border: 1rem solid #c0c0c0;
   vertical-align: top;
   border-radius: 1rem;
+  display: inline-block;
+  margin-left: 2rem;
+  font-size: small;
 }
 
 .nftNumber{
   width: 20rem;
   height: 0rem;
   font-size: medium;
-  margin-top: 1.4rem;
+  margin-top: 2rem;
   text-align: center;
   border: 0rem solid white;
 }
